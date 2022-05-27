@@ -21,7 +21,7 @@ bool canPartition(vector<int> &arr, int n)
     for(int i=0; i<n; i++){
         dp[i][0] = true;
     }
-    dp[0][arr[0]] = true;
+    if(arr[0]<=sum) dp[0][arr[0]] = true;
     for(int i=1; i<n; i++){
         for(int j=1; j<=sum; j++){
             dp[i][j] = dp[i-1][j];
