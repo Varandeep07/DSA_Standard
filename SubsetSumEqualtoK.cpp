@@ -25,7 +25,7 @@ bool subsetSumToK(int n, int k, vector<int> &arr) {
     for(int i=0; i<n; i++){
         dp[i][0] = true;
     }
-    dp[0][arr[0]] = true;
+    if(arr[0]<=k) dp[0][arr[0]] = true;
     for(int i=1; i<n; i++){
         for(int j=1; j<=k; j++){
             dp[i][j] = dp[i-1][j];
