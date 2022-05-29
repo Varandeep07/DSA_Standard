@@ -1,3 +1,8 @@
+#include <bits/stdc++.h> // https://www.codingninjas.com/codestudio/problems/minimum-elements_3843091?leftPanelTab=0
+using namespace std;
+
+// RECURSION + MEMOIZATION
+
 int f(int ind, int x, vector<int> &num, vector<vector<int>> &dp){
     if(ind==0){
         if(x%num[ind]) return INT_MAX;
@@ -15,6 +20,9 @@ int f(int ind, int x, vector<int> &num, vector<vector<int>> &dp){
     }
     return dp[ind][x] = min(Take,notTake);
 }
+
+// DP
+
 int minimumElements(vector<int> &num, int x)
 {
     int n = num.size();
